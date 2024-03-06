@@ -2,6 +2,14 @@
 
 @section('content')
     <div class="container">
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{session('success')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
         <div class="container mt-5">
         <div class="card" style="width: 18rem;">
 
@@ -14,6 +22,7 @@
             <h5 class="card-title">John Doe</h5>
             <p class="card-text"><strong>Nickname:</strong> johndoe123</p>
             <p class="card-text"><strong>Profession:</strong> Web Developer</p>
+            <p class="card-text"><strong>Years of experience</strong> 10 years</p>
 
             <!-- User Services -->
             <h6 class="card-subtitle mb-2 text-muted">Services</h6>

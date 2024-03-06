@@ -47,7 +47,7 @@
                 <a class="nav-link" href="/login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">{{ auth()->user()->name }}</a>
+                    <a class="nav-link" href="/profile">{{ auth()->user()->name }}</a>
                 </li>
                 <form action="{{ route('logout') }}" method="post">
                     @csrf

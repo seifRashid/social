@@ -26,10 +26,13 @@ Route::get('/services',[ServicesController::class, 'index'])->name('services');
 
 Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
+Route::post('/dashboard/{id}',[DashboardController::class, 'store']);
+
 //authentication
 Route::get('/register',[AuthController::class, 'register'])->name('register');
 Route::post('/register',[AuthController::class, 'store']);
 
 Route::get('/login',[AuthController::class, 'login'])->name('login');
 Route::post('/login',[AuthController::class, 'authenticate']);
+
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
